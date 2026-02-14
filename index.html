@@ -2,7 +2,7 @@
 <html lang="es">
 <head>
 <meta charset="UTF-8">
-<title>Feliz 14 de Febrero 💖</title>
+<title>Para Juaquina 💖</title>
 
 <style>
 html, body {
@@ -10,8 +10,8 @@ html, body {
   padding: 0;
   width: 100%;
   height: 100%;
-  overflow: hidden;
   background: black;
+  overflow: hidden;
   font-family: Arial, sans-serif;
 }
 
@@ -21,30 +21,60 @@ html, body {
   top: 20px;
   width: 100%;
   text-align: center;
-  color: #ff79c6;
-  font-size: 24px;
-  text-shadow: 0 0 15px #ff79c6;
+  color: #ff8ccf;
+  font-size: 22px;
+  text-shadow: 0 0 15px #ff4da6;
   z-index: 10;
 }
 
-/* GALAXIA */
+/* CONTENEDOR GALAXIA */
 .galaxia {
   position: absolute;
-  width: 600px;
-  height: 600px;
+  width: 700px;
+  height: 700px;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  border-radius: 50%;
-  background:
-    radial-gradient(circle, rgba(255,255,255,0.9) 1px, transparent 2px),
-    radial-gradient(circle, rgba(255,255,255,0.6) 1px, transparent 2px),
-    radial-gradient(circle, rgba(255,255,255,0.3) 1px, transparent 2px);
-  background-size: 4px 4px, 6px 6px, 8px 8px;
-  animation: girar 60s linear infinite;
-  filter: drop-shadow(0 0 20px #ff79c6);
+  animation: girar 80s linear infinite;
 }
 
+/* BRAZOS */
+.brazo {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  background:
+    repeating-radial-gradient(
+      circle at center,
+      rgba(255,150,200,0.8) 0px,
+      rgba(255,150,200,0.4) 1px,
+      transparent 3px
+    );
+  filter: blur(1px);
+}
+
+.b1 { transform: rotate(0deg); }
+.b2 { transform: rotate(60deg); }
+.b3 { transform: rotate(120deg); }
+.b4 { transform: rotate(180deg); }
+.b5 { transform: rotate(240deg); }
+.b6 { transform: rotate(300deg); }
+
+/* NÚCLEO */
+.nucleo {
+  position: absolute;
+  width: 120px;
+  height: 120px;
+  background: radial-gradient(circle, #fff, #ff79c6, transparent);
+  border-radius: 50%;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  box-shadow: 0 0 40px #ff79c6;
+}
+
+/* ANIMACIÓN */
 @keyframes girar {
   from { transform: translate(-50%, -50%) rotate(0deg); }
   to { transform: translate(-50%, -50%) rotate(360deg); }
@@ -55,7 +85,16 @@ html, body {
 <body>
 
 <div class="titulo">🌌 Juaquina, tú eres mi universo 💖</div>
-<div class="galaxia"></div>
+
+<div class="galaxia">
+  <div class="brazo b1"></div>
+  <div class="brazo b2"></div>
+  <div class="brazo b3"></div>
+  <div class="brazo b4"></div>
+  <div class="brazo b5"></div>
+  <div class="brazo b6"></div>
+  <div class="nucleo"></div>
+</div>
 
 </body>
 </html>
